@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="subscriptionForm">
+        <label for="email">Ing email</label>
+        <input type="email"id="email"name="email">
+        <button type="submit">enviar</button>
+
+    </form>
+    <script>
+        document.getElementById('subscriptionForm').addEventListener('submit',function(e){
+            e.preventDefault();
+
+            const titulo = document.createElement(h1)
+            titulo.textContent = "hola"
+            document.body.append(titulo)
+
+        });
+    </script>
+    <footer class="piepagina">
+
+        <div class="contenedor-pie">
+
+            <div class="bloque-info">
+            <h2 class="titulo-sitio">Sabores en Casa</h2>
+            <p class="descripcion-sitio">Recetas caseras, fáciles y llenas de sabor.</p>
+            </div>
+
+            <div class="bloque-links">
+            <h3>Explorá</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categoria1.html">Categorías</a></li>
+                <li><a href="suscripcion.html">Suscribite</a></li>
+            </ul>
+            </div>
+
+            <div class="bloque-redes">
+            <h3>Seguinos</h3>
+            <ul>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://www.instagram.com/">Facebook</a></li>
+                <li><a href="https://www.instagram.com/">Pinterest</a>/li>
+            </ul>
+            </div>
+
+            <div class="bloque-contacto">
+            <h3>Contacto</h3>
+            <p>📧 <a href="mailto:contacto@saboresencasa.com">contacto@saboresencasa.com</a></p>
+            <p>📍 Buenos Aires, Argentina</p>
+            </div>
+
+        </div>
+
+        <div class="pie-abajo">
+            <p>© 2025 Sabores en Casa — Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+</body>
+</html>
