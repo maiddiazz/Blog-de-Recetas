@@ -27,7 +27,7 @@
             </div>
         </div>
     </header>
-    <section class="suscripcion">
+        <section class="suscripcion">
         <div class="suscripcion-contenedor">           
             <div class="suscripcion-texto">
                 <h2>Suscribite</h2>
@@ -37,11 +37,11 @@
                     <div class="fila">
                     <div class="campo">
                         <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" placeholder="Jane" required>
+                        <input type="text" id="nombre" placeholder="Nombre" required>
                     </div>
                     <div class="campo">
                         <label for="apellido">Apellido</label>
-                        <input type="text" id="apellido" placeholder="Smitherton" required>
+                        <input type="text" id="apellido" placeholder="Apellido" required>
                     </div>
                     </div>
 
@@ -56,7 +56,7 @@
                 <div id="mensaje"></div>
             </div>
             <div class="suscripcion-imagen">
-                <img src="granolacat.jpg" alt="Imagen de ejemplo">
+                <img src="img/granolacat.jpg" alt="Imagen de ejemplo">
             </div>
 
         </div>
@@ -65,7 +65,8 @@
         document.addEventListener("DOMContentLoaded", function() {
             
             const form = document.getElementById("formSuscripcion");
-            const mensajeDiv = document.getElementById("mensaje");
+            const mensajeDiv = document.getElementById("mensaje"); 
+
             if (form) {
                 form.addEventListener("submit", function(e) {
                     e.preventDefault();
@@ -73,6 +74,7 @@
                     const apellido = document.getElementById("apellido").value.trim();
                     const email = document.getElementById("email").value.trim();
 
+                    // Validación 1: Campos vacíos
                     if (!nombre || !apellido || !email) {
                         mensajeDiv.textContent = "❌ Por favor, completá todos los campos.";
                         mensajeDiv.style.color = "#dc3545"; // Rojo oscuro
@@ -82,10 +84,9 @@
                     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
                     if (!emailPattern.test(email)) {
                         mensajeDiv.textContent = "⚠️ Por favor, ingresá un correo electrónico válido.";
-                        mensajeDiv.style.color = "#ffc107"; 
+                        mensajeDiv.style.color = "#ffc107";
                         return;
                     }
-
                     mensajeDiv.textContent = "✅ ¡Gracias por suscribirte! Recibirás nuestras novedades.";
                     mensajeDiv.style.color = "#28a745"; 
                     this.reset(); 
@@ -135,3 +136,4 @@
 </body>
 
 </html>
+
