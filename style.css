@@ -235,7 +235,9 @@ body {
     font-size: 1.8em;
 }
 .art-info-cat .meta {
+    font-size: 0.9em;
     color: #888;
+    margin-bottom: 15px;
 }
 .art-tarjeta .meta {
     font-size: 0.9em;
@@ -1181,4 +1183,5 @@ button:hover {
 }
 
     
+
 
