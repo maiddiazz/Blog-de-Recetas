@@ -905,11 +905,16 @@ button:hover {
     /* ---- cont---- */
     .container {
         padding: 0 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     /* ---- Header ---- */
     .header .menu {
-        display: none;
+        display: block;
+        width: 100%;
+        order: 3;
+        margin-top: 15px;
     }
     
     /* ----tituo*/
@@ -1154,4 +1159,5 @@ button:hover {
         max-width: 300px;
     }
 }
+
     
