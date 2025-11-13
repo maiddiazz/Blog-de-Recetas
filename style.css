@@ -674,8 +674,14 @@ button:hover {
     height: 500px; 
 }
 
-.imagenarticulos img {
-    position: absolute;
+.imagenarticulos img,
+.imagenarticulos picture,
+.imagenarticulos picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .imagenarticulos .imagentit {
@@ -821,7 +827,7 @@ button:hover {
     padding: 8px 0;
     font-size: 0.95em;
 }
-/* 🟠 FOOTER */
+/* FOOTER */
 .piepagina {
   background-color: #f0f0f0;
   color: #333;
@@ -1119,6 +1125,20 @@ button:hover {
         flex-direction: column;
         gap: 10px;
         text-align: center;
+    }
+    .imagenarticulos {
+        flex-basis: 100%; 
+        margin-bottom: 20px;
+        height: auto;
+    }
+    .imagenarticulos img, 
+    .imagenarticulos picture, 
+    .imagenarticulos picture img {
+        width: 100%;
+        height: auto;
+        max-height: 400px; 
+        object-fit: cover;
+        display: block;
     }
     
     /* ---- Footer ---- */
